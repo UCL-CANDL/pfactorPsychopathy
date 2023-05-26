@@ -1,6 +1,4 @@
 # pfactorPsychopathy
-Code for the paper ‘Psychopathic traits and their relationship with vulnerability to general psychopathology in a young adult sample’ (Carlisi, Fielder et al., in prep). 
-
 This repository contains code for the analyses of the paper ‘Psychopathic traits and their relationship with vulnerability to general psychopathology in a young adult sample’ (Carlisi, Fielder et al., in prep). For any queries relating to this code, please email jennifer.fielder.21 (at) ucl.ac.uk.
 
 De-identified data for this study are available by request at https://haririlab.com/projects/procedures.html.
