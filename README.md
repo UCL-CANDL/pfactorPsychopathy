@@ -12,33 +12,30 @@ The R script pfactorPsychopathy_code.R then defines these models to estimate lat
 A key describing the variable names used is below:
 
 Used for the SEM:
-STAI_TOT = State-Trait Anxiety Inventory–Trait Anxiety total score
-CESD_TOT = Center for Epidemiological Studies–Depression Scale total score
-AUDIT_TOT = Alcohol Use Disorders Identification Test total score
-RDU_TOT = Recreational Drug Use Questionnaire total score
-Zd_Anx_combo = mean Z-scored values from the anxious arousal and general distress subscales from the Mood and Anxiety Symptom Questionnaire 
-Zd_Dep_combo = mean Z-scored values from the anhedonic depression and general distress subscales from the Mood and Anxiety Symptom Questionnaire
-Zd_panic_disorder_combo = mean Z-scored symptom counts of social phobia, panic disorder, and agoraphobia from the e-M.I.N.I. (Mini International Neuropsychiatric Interview)
-score19 = Cannabis use symptom counts from the e-M.I.N.I.
-score9 = OCD symptom counts from the e-M.I.N.I.
-score5 = Mania symptom counts from the e-M.I.N.I.
-score22 = Psychosis symptom counts from the e-M.I.N.I.
+- STAI_TOT = State-Trait Anxiety Inventory–Trait Anxiety total score
+- CESD_TOT = Center for Epidemiological Studies–Depression Scale total score
+- AUDIT_TOT = Alcohol Use Disorders Identification Test total score
+- RDU_TOT = Recreational Drug Use Questionnaire total score
+- Zd_Anx_combo = mean Z-scored values from the anxious arousal and general distress subscales from the Mood and Anxiety Symptom Questionnaire 
+- Zd_Dep_combo = mean Z-scored values from the anhedonic depression and general distress subscales from the Mood and Anxiety Symptom Questionnaire
+- Zd_panic_disorder_combo = mean Z-scored symptom counts of social phobia, panic disorder, and agoraphobia from the e-M.I.N.I. (Mini International Neuropsychiatric Interview)
+- score19 = Cannabis use symptom counts from the e-M.I.N.I.
+- score9 = OCD symptom counts from the e-M.I.N.I.
+- score5 = Mania symptom counts from the e-M.I.N.I.
+- score22 = Psychosis symptom counts from the e-M.I.N.I.
 
 Used in regression models:
-p_factor_bi = p factor ‘score’ derived from the bifactor model
-internalising_bi = Internalising factor ‘score’ derived from the bifactor model
-externalising_bi = Externalising factor ‘score’ derived from the bifactor model
-p_factor_hi = p factor ‘score’ derived from the hierarchical model
-internalising_hi = Internalising factor ‘score’ derived from the hierarchical model
-externalising_hi = Externalising factor ‘score’ derived from the hierarchical model
-SRP_Int = Self Report Psychopathy Short Form - Interpersonal facet
-SRP_Aff = Self Report Psychopathy Short Form - Affective facet
-SRP_Life = Self Report Psychopathy Short Form - Lifestyle facet
-SRP_Ans_2 = Self Report Psychopathy Short Form - Antisocial facet (using question2)
-SES_AV = Socioeconomic status, averaged from self, mother and father evaluations.
-Sex = Sex
+- p_factor_bi = p factor ‘score’ derived from the bifactor model
+- internalising_bi = Internalising factor ‘score’ derived from the bifactor model
+- externalising_bi = Externalising factor ‘score’ derived from the bifactor model
+- p_factor_hi = p factor ‘score’ derived from the hierarchical model
+- internalising_hi = Internalising factor ‘score’ derived from the hierarchical model
+- externalising_hi = Externalising factor ‘score’ derived from the hierarchical model
+- SRP_Int = Self Report Psychopathy Short Form - Interpersonal facet
+- SRP_Aff = Self Report Psychopathy Short Form - Affective facet
+- SRP_Life = Self Report Psychopathy Short Form - Lifestyle facet
+- SRP_Ans_2 = Self Report Psychopathy Short Form - Antisocial facet (using question2)
+- SES_AV = Socioeconomic status, averaged from self, mother and father evaluations.
+- Sex = Sex
 
 (the suffix of _ log to variables, is after a log transform)
-
-![image](https://github.com/UCL-CANDL/pfactorPsychopathy/assets/68529945/8e04467e-3737-4e44-a17e-845b4eae2a1a)
-
