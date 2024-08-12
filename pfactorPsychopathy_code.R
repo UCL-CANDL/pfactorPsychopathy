@@ -2,7 +2,7 @@
 ## general psychopathology in a young adult sample’ (Carlisi, Fielder et al., in prep)
 
 # Jennifer Fielder - jennifer.fielder.21@ucl.ac.uk
-# May 2023
+# May 2023. Updated August 2024 to include internal consistency of SRP measures (lines 610 onwards)
 
 # Load dependencies
 library(lavaan)
@@ -605,3 +605,42 @@ summary(higher_order_SRP_model_result, fit.measures=TRUE);
 higher_order_SRP_model_loadings <- inspect(higher_order_SRP_model_result, what = "std")[["lambda"]]
 
 compRelSEM(higher_order_SRP_model_result, higher="p_factor", return.total=TRUE)
+
+##########################################################################  
+###### Extra section - internal consistency and extra descriptive variables
+########################################################################## 
+
+# data file that contains Latino and SRP raw scores (different from csv file fram used above)
+df2 <- ## add csv file here
+
+# merge to get just Latino and raw SRP scores for only those in analytic sample
+df3 <- merge(df, df2, by.x = "ID", by.y = "DNSID")
+
+table(df3$LATINO)
+prop.table(table(df3$LATINO))
+
+## Cronbach's alpha for SRP-SF
+
+# get dataframe of just the raw items
+SRP_item_numbers <- seq(from=1, to=29, by =1)
+
+# Generate the names of the columns to select.  (NB: item 2 is reverse scored, so use the values used in the total scores = REC (instead of _RAW item values).
+SRP_items_names <- paste0("SRPSF_", SRP_raw_numbers, "_REC")
+
+# Data frame - items as columns, ppts as rows
+SRP_items <- df3[, SRP_items_names]
+
+SRP_Int <- select(SRP_items, 7, 9, 10, 15, 19, 23, 26) #each number refers to the column
+SRP_Aff <- select(SRP_items, 3, 8, 13, 16, 18, 24, 28)
+SRP_Life <- select(SRP_items, 1, 4, 11, 14, 17, 21, 27)
+SRP_Anti <- select(SRP_items, 2, 5, 6, 12, 22, 25, 29)
+
+# Overall (total score)
+psych::alpha(SRP_items)
+
+# And for the different subscales
+psych::alpha(SRP_Int)
+psych::alpha(SRP_Aff)
+psych::alpha(SRP_Life)
+psych::alpha(SRP_Anti)
+
